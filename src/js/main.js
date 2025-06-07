@@ -1,1 +1,3 @@
-console.log("Hello World from JS")
+import { commomHeaderFooter } from "./utils.mjs";
+
+commomHeaderFooter();

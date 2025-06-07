@@ -1,0 +1,24 @@
+function renderWithTemplate(template, parentElement, data, callback) {
+    parentElement.innerHTML = template;
+    if (callback) {
+        callback(data);
+    }
+}
+
+async function loadTemplate(path) {
+    const res = await fetch(path);
+    const template = await res.text();
+    return template;
+}
+
+async function injectTemplate(path, selector) {
+    const template = await loadTemplate(path);
+    const element = document.querySelector(selector);
+    renderWithTemplate(template, element);
+}
+
+export async function commomHeaderFooter() {
+    await injectTemplate("/wdd330-project/common/header.html", "#common-header");
+    await injectTemplate("/wdd330-project/common/footer.html", "#common-footer");
+}
+
