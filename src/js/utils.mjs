@@ -20,10 +20,8 @@ async function injectTemplate(path, selector) {
 export async function commomHeaderFooter() {
     await injectTemplate("/wdd330-project/common/header.html", "#common-header");
     await injectTemplate("/wdd330-project/common/footer.html", "#common-footer");
-
-
-    //addStyle("header.css");
-
+    addStyle("style.css");
+    addStyle("style-large.css");
     menuButton();
 }
 
@@ -36,12 +34,10 @@ function menuButton() {
         hamButton.classList.toggle('open');
     });
 }
-/*
-function addStyle() {
+
+function addStyle(style_file) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/wdd330-project/css/style.css';
+    link.href = `../css/${style_file}`;
     document.head.appendChild(link);
 }
-
-*/
