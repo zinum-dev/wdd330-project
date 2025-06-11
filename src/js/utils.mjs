@@ -20,5 +20,28 @@ async function injectTemplate(path, selector) {
 export async function commomHeaderFooter() {
     await injectTemplate("/wdd330-project/common/header.html", "#common-header");
     await injectTemplate("/wdd330-project/common/footer.html", "#common-footer");
+
+
+    //addStyle("header.css");
+
+    menuButton();
 }
 
+function menuButton() {
+    const hamButton = document.querySelector('#menu');
+    const navigation = document.querySelector('.navigation');
+
+    hamButton.addEventListener('click', () => {
+        navigation.classList.toggle('open');
+        hamButton.classList.toggle('open');
+    });
+}
+/*
+function addStyle() {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/wdd330-project/css/style.css';
+    document.head.appendChild(link);
+}
+
+*/
