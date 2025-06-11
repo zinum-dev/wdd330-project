@@ -90,3 +90,7 @@ main {
     margin: auto;
     max-width: 800px;
 }
+
+footer {
+    text-align: center;
+}
