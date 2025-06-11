@@ -5,12 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <script src="./js/main.js" type="module"></script>
 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-large.css">
+
+    <link rel="stylesheet" href="./css/home.css">
+
+    <script src="./js/main.js" type="module"></script>
 </head>
 
 <body>
-    <p>Hello World</p>
+    <header id="common-header"></header>
+    <main>
+        <div class="side-weather-card">
+            <span id="temp">72º</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC08QQnNZ67pCnT1ZLHRCEgex2rA7FGphjFQ&s"
+                alt="">
+            <span>Partly Cloudy</span>
+        </div>
+        <form>
+            <button type="submit">🔎</button>
+            <input type="text" name="location" id="location" placeholder="Location" required>
+        </form>
+        <div class="recipe-cards">
+            <div class="card">Card Content</div>
+            <div class="card">Card Content</div>
+            <div class="card">Card Content</div>
+                    <div class="card">Card Content</div>
+            <div class="card">Card Content</div>
+        </div>
+    </main>
+    <footer class="footer" id="common-footer"></footer>
 </body>
 
 </html>
