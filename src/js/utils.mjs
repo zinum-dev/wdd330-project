@@ -38,6 +38,6 @@ function menuButton() {
 function addStyle(style_file) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `../css/${style_file}`;
+    link.href = `/wdd330-project/css/${style_file}`;
     document.head.appendChild(link);
 }
