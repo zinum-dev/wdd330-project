@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/style-large.css">
 
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/home-large.css">
 
     <script src="./js/main.js" type="module"></script>
 </head>
@@ -23,22 +24,38 @@
     <header id="common-header"></header>
     <main>
         <div class="side-weather-card">
-            <h2 id="location">Location Placeholder</h2>
-            <span id="temp">72º</span>
+            <h2>Location Placeholder</h2>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC08QQnNZ67pCnT1ZLHRCEgex2rA7FGphjFQ&s"
                 alt="">
-            <span>Partly Cloudy</span>
+            <div>
+                <span id="temp">72º</span>
+                <span>Partly Cloudy</span>
+            </div>
         </div>
         <form>
-            <button type="submit">🔎</button>
+            <button type="submit">
+                <img src="./images/search.png" alt="search icon">
+            </button>
             <input type="text" name="location" id="location" placeholder="Location" required>
+
         </form>
         <div class="recipe-cards">
-            <div class="card">Card Content</div>
-            <div class="card">Card Content</div>
-            <div class="card">Card Content</div>
-            <div class="card">Card Content</div>
-            <div class="card">Card Content</div>
+            <div class="recipe-card">
+                <img src="./images/skillet_70.png" alt="Recipe image">
+                <span>Recipe 1</span>
+                <span>Brief description</span>
+            </div>
+            <div class="recipe-card">
+                <img src="./images/skillet_70.png" alt="Recipe image">
+                <span>Recipe 2</span>
+                <span>Brief description</span>
+            </div>
+            <div class="recipe-card">
+                <img src="./images/skillet_70.png" alt="Recipe image">
+                <span>Recipe 3</span>
+                <span>Brief description</span>
+            </div>
+
         </div>
     </main>
     <footer class="footer" id="common-footer"></footer>

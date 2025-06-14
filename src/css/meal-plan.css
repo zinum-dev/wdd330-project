@@ -45,6 +45,7 @@ h2 {
 .recipe-plan{
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .recipe-card{
@@ -53,7 +54,6 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
-    margin-bottom: .5rem;
 }
 
 .recipe-card img{
