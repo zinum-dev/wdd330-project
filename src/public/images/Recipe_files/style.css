@@ -18,7 +18,6 @@
     box-sizing: border-box;
     background-color: var(--background);
     font-family: var(--body-font);
-    color: var(--text);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,7 +42,6 @@ header {
     background: none;
     cursor: pointer;
     grid-column: 3 / 4;
-    color: var(--secondary);
 }
 
 #menu::before {
