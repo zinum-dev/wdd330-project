@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-large.css">
+    <link rel="stylesheet" href="../css/meal-plan.css">
+    <link rel="stylesheet" href="../css/meal-plan-large.css">
 
     <script src="../js/main.js" type="module"></script>
 </head>
@@ -21,57 +23,68 @@
     <header class="header" id="common-header"></header>
     <main>
         <h1>5-Day Meal Plan</h1>
-        <span id="location">Location PlaceHolder</span>
-        <div id="meal-plan">
-            <div>
+        <h2 id="location">Location PlaceHolder</h2>
+        <div id="meal-plan" class="forecast-weather">
+            <div class="weather-day">
                 <span>Day 1</span>
-                <img src="" alt="weather-icon">
-                <span>XXº</span>
+                <img src="../images/logo.png" alt="weather-icon">
+                <span>Min 23º</span>
+                <span>Max 27º</span>
             </div>
-            <div>
+            <div class="weather-day">
                 <span>Day 2</span>
-                <img src="" alt="weather-icon">
-                <span>XXº</span>
+                <img src="../images/logo.png" alt="weather-icon">
+                <span>Min 23º</span>
+                <span>Max 27º</span>
             </div>
-            <div>
+            <div class="weather-day">
                 <span>Day 3</span>
-                <img src="" alt="weather-icon">
-                <span>XXº</span>
+                <img src="../images/logo.png" alt="weather-icon">
+                <span>Min 23º</span>
+                <span>Max 27º</span>
             </div>
-            <div>
+            <div class="weather-day">
                 <span>Day 4</span>
-                <img src="" alt="weather-icon">
-                <span>XXº</span>
+                <img src="../images/logo.png" alt="weather-icon">
+                <span>Min 23º</span>
+                <span>Max 27º</span>
             </div>
-            <div>
+            <div class="weather-day">
                 <span>Day 5</span>
-                <img src="" alt="weather-icon">
-                <span>XXº</span>
+                <img src="../images/logo.png" alt="weather-icon">
+                <span>Min 23º</span>
+                <span>Max 27º</span>
             </div>
         </div>
-        <div id="recipe-plan">
-            <div>
-                <span>Recipe Day 1</span>
-                <img src="" alt="Recipe image">
+
+        <div class="recipe-plan">
+            <div class="recipe-card">
+                <img src="../images/skillet_70.png" alt="Recipe image">
+                <span>Day 1</span>
+                <span>Recipe Name</span>
             </div>
-            <div>
-                <span>Recipe Day 2</span>
-                <img src="" alt="Recipe image">
+            <div class="recipe-card">
+                <img src="../images/skillet_70.png" alt="Recipe image">
+                <span>Day 2</span>
+                <span>Recipe Name</span>
             </div>
-            <div>
-                <span>Recipe Day 3</span>
-                <img src="" alt="Recipe image">
+            <div class="recipe-card">
+                <img src="../images/skillet_70.png" alt="Recipe image">
+                <span>Day 3</span>
+                <span>Recipe Name</span>
             </div>
-            <div>
-                <span>Recipe Day 4</span>
-                <img src="" alt="Recipe image">
+            <div class="recipe-card">
+                <img src="../images/skillet_70.png" alt="Recipe image">
+                <span>Day 4</span>
+                <span>Recipe Name</span>
             </div>
-            <div>
-                <span>Recipe Day 5</span>
-                <img src="" alt="Recipe image">
+            <div class="recipe-card">
+                <img src="../images/skillet_70.png" alt="Recipe image">
+                <span>Day 5</span>
+                <span>Recipe Name</span>
             </div>
         </div>
-        <button type="button">Share Plan</button>
+        <button type="button" id="share-button">Share Plan</button>
     </main>
     <footer class="footer" id="common-footer"></footer>
 </body>

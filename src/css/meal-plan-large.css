@@ -1,0 +1,29 @@
+@media (min-width: 780px) {
+
+.recipe-plan{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: .5rem;
+    gap: 10px;
+}
+
+.recipe-card{
+    border: solid .5px var(--accent);
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: .5rem;
+    justify-items: center;
+    flex: 1 1 0; /* Faz cada card ocupar o máximo possível */
+}
+
+.recipe-card img{
+    border-radius: 18px;
+    grid-column: 1;
+    max-width: 80%;
+    padding-left: 10%;
+    grid-row: 5; /* Um valor alto garante que vá para o final */
+
+}
+    
+}
