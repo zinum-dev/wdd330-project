@@ -1,0 +1,21 @@
+@media (min-width: 780px) {
+    #recipe{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    #recipe-image{
+        grid-row: 1/6;
+        align-self: center;
+        max-height: 80%;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #instructions{
+        grid-column: 1/3;
+    }
+}
