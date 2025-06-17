@@ -130,8 +130,19 @@ export async function getWeaher(position) {
             weatherCode: current.variables(1).value(),
             description: desc_icon.description,
             icon: desc_icon.icon,
+            latitude: position.latitude,
+            longitude: position.longitude,
         },
     };
 
     return weatherData
+}
+
+
+// get the product id from the query string
+export function getParam(param) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const product = urlParams.get(param);
+    return product;
 }

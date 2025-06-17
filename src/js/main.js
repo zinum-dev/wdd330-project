@@ -51,8 +51,9 @@ async function weather(position) {
         "latitude": position.coords.latitude,
         "longitude": position.coords.longitude,
     });
+
     console.log(weatherData);
-    setLocationWeatherData(weatherData, "Rio de Janeiro");
+    setLocationWeatherData(weatherData);
 }
 
 
@@ -64,17 +65,30 @@ function setLocationWeatherData(weatherData, location) {
             <span id="temp">${Math.floor(weatherData.current.temperature2m)}º</span>
             <img src="${weatherData.current.icon}" alt="weather icon">
                 <span>${weatherData.current.description}</span>
-            </div>`;
+                <button id="get-meal-plan" type="button">Show Plan</button>
+            </div>
+            `;
     const template = `
         <div>
         <span id="temp">${Math.floor(weatherData.current.temperature2m)}º</span>
         <img src="${weatherData.current.icon}" alt="weather icon">
             <span>${weatherData.current.description}</span>
-        </div>`;
-    console.log("add new location info")
+            <button id="get-meal-plan" type="button">Show Plan</button>
+        </div>
+        `;
     location_weather.innerHTML = location ? template_location : template;
-}
 
+    // Adiciona o event listener ao botão get-meal-plan após inseri-lo no DOM
+    const mealPlanBtn = document.getElementById("get-meal-plan");
+    if (mealPlanBtn) {
+        mealPlanBtn.addEventListener("click", function () {
+            // Redireciona para outra página com latitude e longitude como parâmetros
+            const lat = weatherData.current.latitude;
+            const lon = weatherData.current.longitude;
+            window.location.href = `pages/meal-plan.html?lat=${lat}&lon=${lon}`;
+        });
+    }
+}
 
 
 
