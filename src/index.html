@@ -23,21 +23,13 @@
 <body>
     <header id="common-header"></header>
     <main>
-        <div class="side-weather-card">
-            <h2>Location Placeholder</h2>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC08QQnNZ67pCnT1ZLHRCEgex2rA7FGphjFQ&s"
-                alt="">
-            <div>
-                <span id="temp">72º</span>
-                <span>Partly Cloudy</span>
-            </div>
+        <div id="location_weather" class="side-weather-card">
         </div>
         <form>
             <button type="submit">
                 <img src="./images/search.png" alt="search icon">
             </button>
-            <input type="text" name="location" id="location" placeholder="Location" required>
-
+            <input type="text" name="location" id="location" placeholder="Location" required minlength="3">
         </form>
         <div class="recipe-cards">
             <div class="recipe-card">

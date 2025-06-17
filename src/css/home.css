@@ -22,12 +22,13 @@ main{
 
 .side-weather-card{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     border: solid 1px var(--secondary);
     border-radius: 18px;
     padding: 1rem;
     align-items: center;  
+    text-align: center;
 }
 
 .side-weather-card h2{
@@ -44,11 +45,20 @@ main{
 .side-weather-card div{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .side-weather-card #temp{
     font-size: 4rem;
     font-weight: bold;
+}
+
+#get-meal-plan {
+    margin-top: 1rem;
+    margin-inline: 3rem;
+    padding: .2rem 2.5rem;
+    border-radius: 18px;
+    background-color: var(--secondary);
 }
 
 form {
