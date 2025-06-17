@@ -11,33 +11,42 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
+
 
-
-  <script type="module" crossorigin src="/wdd330-project/assets/main-UAUZZm8k.js"></script>
-  <link rel="stylesheet" crossorigin href="/wdd330-project/assets/main-qO9EmUfK.css">
-  <link rel="stylesheet" crossorigin href="/wdd330-project/assets/main-DBZvJWhR.css">
+  <script type="module" crossorigin src="/wdd330-project/assets/utils-CSkXL4Hd.js"></script>
+  <script type="module" crossorigin src="/wdd330-project/assets/main-DnM3m2QT.js"></script>
+  <link rel="stylesheet" crossorigin href="/wdd330-project/assets/utils-qO9EmUfK.css">
+  <link rel="stylesheet" crossorigin href="/wdd330-project/assets/main-D_nHg5W_.css">
 </head>
 
 <body>
     <header id="common-header"></header>
     <main>
-        <div class="side-weather-card">
-            <h2 id="location">Location Placeholder</h2>
-            <span id="temp">72º</span>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC08QQnNZ67pCnT1ZLHRCEgex2rA7FGphjFQ&s"
-                alt="">
-            <span>Partly Cloudy</span>
+        <div id="location_weather" class="side-weather-card">
         </div>
         <form>
-            <button type="submit">🔎</button>
-            <input type="text" name="location" id="location" placeholder="Location" required>
+            <button type="submit">
+                <img src="./images/search.png" alt="search icon">
+            </button>
+            <input type="text" name="location" id="location" placeholder="Location" required minlength="3">
         </form>
         <div class="recipe-cards">
-            <div class="card">Card Content</div>
-            <div class="card">Card Content</div>
-            <div class="card">Card Content</div>
-            <div class="card">Card Content</div>
-            <div class="card">Card Content</div>
+            <div class="recipe-card">
+                <img src="./images/skillet_70.png" alt="Recipe image">
+                <span>Recipe 1</span>
+                <span>Brief description</span>
+            </div>
+            <div class="recipe-card">
+                <img src="./images/skillet_70.png" alt="Recipe image">
+                <span>Recipe 2</span>
+                <span>Brief description</span>
+            </div>
+            <div class="recipe-card">
+                <img src="./images/skillet_70.png" alt="Recipe image">
+                <span>Recipe 3</span>
+                <span>Brief description</span>
+            </div>
+
         </div>
     </main>
     <footer class="footer" id="common-footer"></footer>
