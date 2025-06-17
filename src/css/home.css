@@ -28,6 +28,7 @@ main{
     border-radius: 18px;
     padding: 1rem;
     align-items: center;  
+    text-align: center;
 }
 
 .side-weather-card h2{
@@ -44,6 +45,7 @@ main{
 .side-weather-card div{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .side-weather-card #temp{
