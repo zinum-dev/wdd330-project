@@ -98,6 +98,9 @@ form input:focus {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
+    display: block; 
+    text-decoration: none; 
+    color: inherit;
 }
 
 .recipe-card img{

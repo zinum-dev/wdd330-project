@@ -53,7 +53,7 @@ async function weather(position) {
     });
 
     console.log(weatherData);
-    setLocationWeatherData(weatherData);
+    setLocationWeatherData(weatherData, "Actual Location");
 }
 
 

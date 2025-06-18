@@ -58,13 +58,13 @@ function convertToJson(res) {
 
 
 
-function recipeTemplate(day, path_img, recipe_name, recipe_description) {
-    return `<div class="recipe-card">
+function recipeTemplate(recipe_id, day, path_img, recipe_name, recipe_description) {
+    return `<a href="recipe.html?recipe_id=${recipe_id}" class="recipe-card">
                 <img src="${path_img}" alt="Recipe image">
                 <span>${day}</span>
                 <span>${recipe_name}</span>
                 <span>${recipe_description}</span>
-            </div>`;
+            </a>`;
 }
 
 
@@ -80,7 +80,7 @@ async function get5dayrecipes() {
         const path_logo = "./images/nutrition.png";
         const recipe_name = "Recipe";
         const recipe_description = "Descrição";
-        const html = recipeTemplate(formattedDay, path_logo, recipe_name, recipe_description);
+        const html = recipeTemplate(i, formattedDay, path_logo, recipe_name, recipe_description);
         container.innerHTML += html;
     });
 
