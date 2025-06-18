@@ -86,11 +86,8 @@ function wmoInterpretation(description, icon) {
 }
 
 // Returns { description, iconPath } for a given weather code
-function getWeatherDescriptionAndIcon(code) {
+export function getWeatherDescriptionAndIcon(code) {
     const entry = WMO_CODES[code];
-    console.log(code)
-
-    console.log(entry)
     if (entry) {
         return wmoInterpretation(entry.description, `./images/${entry.icon}`);
     }
