@@ -85,7 +85,7 @@ function setLocationWeatherData(weatherData, location) {
             // Redireciona para outra página com latitude e longitude como parâmetros
             const lat = weatherData.current.latitude;
             const lon = weatherData.current.longitude;
-            window.location.href = `pages/meal-plan.html?lat=${lat}&lon=${lon}`;
+            window.location.href = `pages/meal-plan.html?lat=${lat}&lon=${lon}&location=${location}`;
         });
     }
 }
