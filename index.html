@@ -13,10 +13,11 @@
 
 
 
-  <script type="module" crossorigin src="/wdd330-project/assets/utils-C5Jidw-F.js"></script>
-  <script type="module" crossorigin src="/wdd330-project/assets/main-LAtco7gM.js"></script>
+  <script type="module" crossorigin src="/wdd330-project/assets/main-BfHKou4F.js"></script>
+  <link rel="modulepreload" crossorigin href="/wdd330-project/assets/utils-C5Jidw-F.js">
+  <link rel="modulepreload" crossorigin href="/wdd330-project/assets/recipe-recommender-BdI_6W69.js">
   <link rel="stylesheet" crossorigin href="/wdd330-project/assets/utils-qO9EmUfK.css">
-  <link rel="stylesheet" crossorigin href="/wdd330-project/assets/main-D_nHg5W_.css">
+  <link rel="stylesheet" crossorigin href="/wdd330-project/assets/main-BvUPPwvF.css">
 </head>
 
 <body>
@@ -30,24 +31,7 @@
             </button>
             <input type="text" name="location" id="location" placeholder="Location" required minlength="3">
         </form>
-        <div class="recipe-cards">
-            <div class="recipe-card">
-                <img src="./images/skillet_70.png" alt="Recipe image">
-                <span>Recipe 1</span>
-                <span>Brief description</span>
-            </div>
-            <div class="recipe-card">
-                <img src="./images/skillet_70.png" alt="Recipe image">
-                <span>Recipe 2</span>
-                <span>Brief description</span>
-            </div>
-            <div class="recipe-card">
-                <img src="./images/skillet_70.png" alt="Recipe image">
-                <span>Recipe 3</span>
-                <span>Brief description</span>
-            </div>
-
-        </div>
+        <div id="recipes_container" class="recipe-cards"></div>
     </main>
     <footer class="footer" id="common-footer"></footer>
 </body>
