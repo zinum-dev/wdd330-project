@@ -1,4 +1,5 @@
 import { commomHeaderFooter, getParam, getWeatherDescriptionAndIcon } from "./utils.mjs";
+import { getRecipesDailyRange } from "./recipe-recommender.mjs";
 
 
 commomHeaderFooter();
@@ -31,7 +32,7 @@ async function get5dayweather(lat, lon) {
         // Format day as MM/DD
         const dateObj = new Date(day);
         const formattedDay = `${dateObj.getMonth() + 1}/${dateObj.getDate()}`;
-        days.push(formattedDay)
+        days.push({ day: formattedDay, min, max });
         const html = weatherTemplate(formattedDay, path_logo, desc_icon.description, min, max);
         container.innerHTML += html;
     });
@@ -58,29 +59,23 @@ function convertToJson(res) {
 
 
 
-function recipeTemplate(day, path_img, recipe_name, recipe_description) {
-    return `<div class="recipe-card">
-                <img src="${path_img}" alt="Recipe image">
+function recipeTemplate(recipe, day) {
+    return `<a href="recipe.html?recipe_id=${recipe.id}" class="recipe-card">
+                <img src="${recipe.imageUrl}" alt="Recipe image">
                 <span>${day}</span>
-                <span>${recipe_name}</span>
-                <span>${recipe_description}</span>
-            </div>`;
+                <span>${recipe.name}</span>
+                <span>${recipe.description}</span>
+            </a>`;
 }
 
 
 
 async function get5dayrecipes() {
-    /*const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min&forecast_days=5`;
-    const response = await fetch(url);
-    const data = await convertToJson(response);
-    */const container = document.querySelector('#recipe-plan');
-    container.innerHTML = ""; // Clear previous content
-    // Podemos usar o array days já preenchido, assumindo que ele tem os mesmos índices dos dados diários:
-    days.forEach((formattedDay, i) => {
-        const path_logo = "./images/nutrition.png";
-        const recipe_name = "Recipe";
-        const recipe_description = "Descrição";
-        const html = recipeTemplate(formattedDay, path_logo, recipe_name, recipe_description);
+    const container = document.querySelector('#recipe-plan');
+    container.innerHTML = "";
+    days.forEach(async (dayObj, i) => {
+        const recipe = await getRecipesDailyRange(dayObj.min, dayObj.max);
+        const html = recipeTemplate(recipe, dayObj.day);
         container.innerHTML += html;
     });
 

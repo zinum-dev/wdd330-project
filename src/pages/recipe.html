@@ -18,99 +18,42 @@
     <link rel="stylesheet" href="../css/recipe.css">
     <link rel="stylesheet" href="../css/recipe-large.css">
 
-    <script src="../js/main.js" type="module"></script>
+    <script src="../js/recipe-detail.js" type="module"></script>
 </head>
 
 <body>
     <header class="header" id="common-header"></header>
     <main>
-        <section id="favorites">
-            <h2>Favorites</h2>
-            <ul>
-                <li>Recipe 1</li>
-                <li>Recipe 2</li>
-            </ul>
-        </section>
-
         <div id="recipe">
             <h1 id="recipe-title">Recipe PlaceHolder</h1>
-            <img id="recipe-image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC08QQnNZ67pCnT1ZLHRCEgex2rA7FGphjFQ&s"
-                alt="Recipe image">
+            <img id="recipe-image" src="../images/placeholder.png" alt="Recipe image">
             <div id="time-difficulty">
                 <div>
                     <img src="../images/timer.png" alt="timer">
-                    <span>30 Minutes</span>
+                    <span id="recipe-ready-in-minutes">30 Minutes</span>
                 </div>
                 <div>
                     <img src="../images/add_circle.png" alt="timer">
-                    <span>Hard</span>
+                    <span id="recipe-servings">Hard</span>
                 </div>
             </div>
-            <section id="ingredients" class="list">
+            <section id="ingredients-list" class="list">
                 <h2>Ingredients</h2>
                 <div>
                     <ul>
-                        <li>
-                            <img src="../images/check_box.png" alt="">
-                            <span>Ingredient 1</span>
-                        </li>
-                        <li>
-                            <img src="../images/check_box.png" alt="">
-                            <span>Ingredient 2</span>
-                        </li>
-                        <li>
-                            <img src="../images/check_box.png" alt="">
-                            <span>Ingredient 3</span>
-                        </li>
-                        <li>
-                            <img src="../images/check_box.png" alt="">
-                            <span>Ingredient 4</span>
-                        </li>
                     </ul>
                 </div>
             </section>
-            <section id="nutrition" class="list">
+            <section id="nutrition-list" class="list">
                 <h2>Nutrition</h2>
-                <ul>
-                    <li>
-                        <img src="../images/nutrition.png" alt="">
-                        <span>Calories</span>
-                    </li>
-                    <li>
-                        <img src="../images/nutrition.png" alt="">
-                        <span>Carbs</span>
-                    </li>
-                    <li>
-                        <img src="../images/nutrition.png" alt="">
-                        <span>Protein</span>
-                    </li>
-                </ul>
+                <div>
+                    <ul>
+                    </ul>
+                </div>
             </section>
-            <button id="save-button" type="button">Save Recipe</button>
             <section id="instructions" class="list">
                 <h2>Instructions</h2>
                 <div id="steps">
-                    <div class="step">
-                        <h3>Step 1</h3>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, dicta dignissimos in
-                            porro
-                        </span>
-                    </div>
-                    <div class="step">
-                        <h3>Step 2</h3>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                    </div>
-                    <div class="step">
-                        <h3>Step 3</h3>
-                        <span>Lorem ipsum dolor sit amet consectetur </span>
-                    </div>
-                    <div class="step">
-                        <h3>Step 4</h3>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, dicta dignissimos in
-                            porro
-                            provident iure consequuntur tempore odit</span>
-                    </div>
                 </div>
 
             </section>
