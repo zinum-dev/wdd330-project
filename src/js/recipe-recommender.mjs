@@ -1,5 +1,5 @@
 
-//const SPOONACULAR_API_KEY = "ac71f833e3914b4e8c03ee6c209ccb64"; 
+//const SPOONACULAR_API_KEY = "ac71f833e3914b4e8c03ee6c209ccb64";
 const SPOONACULAR_API_KEY = "aa4e1f66790e47f69ee4f7e61e916a2f";
 
 // Nutritional guidelines based on temperature (in Celsius)
