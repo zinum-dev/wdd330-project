@@ -21,9 +21,8 @@
     border-radius: 18px;
     grid-column: 1;
     max-width: 80%;
-    padding-left: 10%;
     grid-row: 5; /* Um valor alto garante que vá para o final */
-
+    margin-left: 0;
 }
     
 }

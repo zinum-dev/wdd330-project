@@ -1,4 +1,5 @@
 import { commomHeaderFooter, getWeaher } from "./utils.mjs";
+import { getRecipesCurrentTemp } from "./recipe-recommender.mjs";
 
 
 commomHeaderFooter();
@@ -32,6 +33,7 @@ async function getLocations(location) {
         });
         console.log(weatherData);
         setLocationWeatherData(weatherData, loc.name);
+        setRecipeData(weatherData)
     }
     return locations
 }
@@ -54,6 +56,7 @@ async function weather(position) {
 
     console.log(weatherData);
     setLocationWeatherData(weatherData, "Actual Location");
+    setRecipeData(weatherData)
 }
 
 
@@ -90,6 +93,21 @@ function setLocationWeatherData(weatherData, location) {
     }
 }
 
+
+async function setRecipeData(weatherData) {
+    const recipes = await getRecipesCurrentTemp(weatherData.current.temperature2m);
+    const container = document.getElementById("recipes_container");
+    if (!container) return;
+
+    container.innerHTML = recipes.map(recipe => `
+        <a href="pages/recipe.html?recipe_id=${recipe.id}" class="recipe-card">
+            <img src="${recipe.imageUrl}" alt="Recipe image">
+            <span>${recipe.name}</span>
+            <span>${recipe.description}</span>
+        </a>
+    `).join('');
+
+}
 
 
 
